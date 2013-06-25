@@ -1,2 +1,9 @@
 
 .DS_Store
+Unity/Assembly-CSharp-vs.csproj
+Unity/Assembly-CSharp.csproj
+Unity/Singleton.cs
+Unity/Unity-csharp.sln
+Unity/Unity-csharp.userprefs
+Unity/Unity.sln
+Unity/Unity.userprefs
