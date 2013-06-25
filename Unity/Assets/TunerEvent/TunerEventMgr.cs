@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace TunerEvent
+namespace Tuner.Event
 {
 		class DelayEvent
 		{
