@@ -2,18 +2,32 @@
    Tuner Data -  Read Static Data in Game Development.
    e-mail : dongliang17@126.com
 */
+
 using System.Diagnostics;
+using UnityEngine;
+
 namespace Tuner
 {
-    public class Singleton<T> where T : new()
+    public class Singleton<T> :MonoBehaviour where T : MonoBehaviour
     {
-        protected Singleton() {
+        protected Singleton()
+        {
             //Debug.Assert(null == instance);
         }
-        protected static T instance = new T();
-        public static T Instance
+
+        protected static T me;
+
+        public static T Me
         {
-            get { return instance; }
+            get
+            {
+                if (me == null)
+                {
+                    me = new GameObject(typeof(T).ToString()).AddComponent<T>();
+                }
+
+                return me;
+            }
         }
     }
 }
